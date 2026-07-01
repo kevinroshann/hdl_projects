@@ -11,8 +11,8 @@ output reg pready,
 input [31:0] paddr
 
 );
-reg [31:0] pwdata_store;
-reg [31:0] [31:0] data;
+
+reg [31:0] memory [0:31];
 reg [1:0] state;
 
 reg [1:0] next_state;
@@ -23,9 +23,11 @@ reg [1:0] next_state;
 
 
 always @(*) begin
-
-case(state)
 next_state = state;
+    prdata = 32'd0;
+    pready = 1'b0;
+case(state)
+
 IDLE: begin
   
     if(psel) begin
@@ -34,52 +36,46 @@ IDLE: begin
 
 end
 SETUP: begin
-  
-
-if(penable) begin
-    next_state=ACCESS;
-end
+    if (psel && penable)
+        next_state = ACCESS;
+    else if (!psel)
+        next_state = IDLE;
 
 end
 
 ACCESS: begin
-  
-if(pwrite) begin
-  pwdata_store=pwdata;
+if (psel && penable) begin
+    pready = 1'b1;
+
+    if (!pwrite)
+        prdata = memory[paddr[4:0]];
 end
-else if(!pwrite)begin
-  prdata=data[paddr];
-end
-if (pready)
-        next_state = IDLE;   // or SETUP if another transfer
+   if (!psel)
+        next_state = IDLE;
     else
-        next_state = ACCESS;
+        next_state = SETUP;
 
 end
-
+default: begin
+    next_state = IDLE;
+end
 
 endcase
 
 
 end
 
-always @(posedge pclk) begin
-    
-    if(!presetn) begin
-      state<=IDLE;
-
-    end 
-    else begin
-      
-        state<=next_state;
-
-
+always @(posedge pclk or negedge presetn) begin
+    if (!presetn) begin
+        state <= IDLE;
     end
+    else begin
+        state <= next_state;
 
-
-
+        if (state == ACCESS && pready && pwrite)
+            memory[paddr[4:0]] <= pwdata;
+    end
 end
-
 
 
 
