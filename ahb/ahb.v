@@ -51,7 +51,7 @@ always @(posedge hclk or negedge hresetn) begin
             end
             else begin //read
               
-                hrdata<=mem[addr_reg[9:2]]
+                hrdata<=mem[addr_reg[9:2]];
 
             end
 

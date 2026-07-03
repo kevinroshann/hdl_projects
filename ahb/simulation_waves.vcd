@@ -1,0 +1,159 @@
+$date
+	Fri Jul  3 08:07:58 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module ahb_tb $end
+$var wire 1 ! hresp $end
+$var wire 1 " hreadyout $end
+$var wire 32 # hrdata [31:0] $end
+$var reg 32 $ haddr [31:0] $end
+$var reg 1 % hclk $end
+$var reg 1 & hready $end
+$var reg 1 ' hresetn $end
+$var reg 1 ( hsel $end
+$var reg 3 ) hsize [2:0] $end
+$var reg 2 * htrans [1:0] $end
+$var reg 32 + hwdata [31:0] $end
+$var reg 1 , hwrite $end
+$var reg 32 - read_data [31:0] $end
+$scope module dut $end
+$var wire 32 . haddr [31:0] $end
+$var wire 1 % hclk $end
+$var wire 1 & hready $end
+$var wire 1 ' hresetn $end
+$var wire 1 ( hsel $end
+$var wire 3 / hsize [2:0] $end
+$var wire 2 0 htrans [1:0] $end
+$var wire 32 1 hwdata [31:0] $end
+$var wire 1 , hwrite $end
+$var reg 32 2 addr_reg [31:0] $end
+$var reg 32 3 hrdata [31:0] $end
+$var reg 1 " hreadyout $end
+$var reg 1 ! hresp $end
+$var reg 3 4 size_reg [2:0] $end
+$var reg 1 5 valid_reg $end
+$var reg 1 6 write_reg $end
+$upscope $end
+$scope task read $end
+$var reg 32 7 addr [31:0] $end
+$var reg 32 8 data_output [31:0] $end
+$upscope $end
+$scope task write $end
+$var reg 32 9 addr [31:0] $end
+$var reg 32 : data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx :
+bx 9
+bx 8
+bx 7
+06
+05
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+bx -
+0,
+b0 +
+b0 *
+b0 )
+0(
+0'
+1&
+0%
+b0 $
+b0 #
+1"
+0!
+$end
+#50
+1%
+#100
+0%
+#150
+1%
+#200
+0%
+#250
+1%
+#300
+0%
+#350
+1%
+#400
+0%
+#450
+1%
+#500
+b10 )
+b10 /
+b10 *
+b10 0
+1,
+b100 $
+b100 .
+1(
+0%
+b11011110101011011011111011101111 :
+b100 9
+1'
+#550
+15
+b10 4
+16
+b100 2
+b11011110101011011011111011101111 +
+b11011110101011011011111011101111 1
+1%
+#600
+0%
+#650
+05
+b100 7
+0,
+b0 *
+b0 0
+0(
+1%
+#700
+0%
+#750
+15
+06
+b10 *
+b10 0
+1(
+1%
+#800
+0%
+#850
+b11011110101011011011111011101111 #
+b11011110101011011011111011101111 3
+1%
+#851
+b11011110101011011011111011101111 8
+#900
+0%
+#950
+05
+b11011110101011011011111011101111 -
+b0 *
+b0 0
+0(
+1%
+#1000
+0%
+#1050
+1%
