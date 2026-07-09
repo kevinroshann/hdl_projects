@@ -27,7 +27,6 @@ reg [3:0] reg_addr_source;
 reg [3:0] reg_addr_destination;
 
 reg [31:0] reg_read_data;
-reg [31:0] reg_write_data;
 
 reg [1:0] state;
 reg [1:0] next_state;
@@ -44,7 +43,7 @@ assign done       = (state == FINISH);
 
 assign read_addr  = reg_addr_source;
 assign write_addr = reg_addr_destination;
-assign write_data = reg_write_data;
+assign write_data = reg_read_data;
 
 
 always @(*) begin
@@ -94,7 +93,7 @@ always @(posedge clk or negedge resetn) begin
         reg_addr_destination <= 4'd0;
 
         reg_read_data <= 32'd0;
-        reg_write_data <= 32'd0;
+
 
     end
     else begin
@@ -119,12 +118,12 @@ always @(posedge clk or negedge resetn) begin
 
         if(state == WRITE && write_gnt) begin
 
-            reg_write_data <= reg_read_data;
+
 
             reg_length <= reg_length - 1;
 
-            reg_addr_source <= reg_addr_source + 4;
-            reg_addr_destination <= reg_addr_destination + 4;
+            reg_addr_source <= reg_addr_source + 1;
+            reg_addr_destination <= reg_addr_destination + 1;
 
         end
 
