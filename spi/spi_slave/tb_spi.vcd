@@ -1,0 +1,149 @@
+$date
+	Mon Jul 13 01:57:54 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_spi $end
+$var wire 1 ! miso $end
+$var reg 1 " clk $end
+$var reg 1 # cs $end
+$var reg 1 $ done $end
+$var reg 8 % miso_data [7:0] $end
+$var reg 1 & mosi $end
+$var reg 4 ' tb_index [3:0] $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # cs $end
+$var wire 1 & mosi $end
+$var wire 1 ! miso $end
+$var reg 4 ( index [3:0] $end
+$var reg 8 ) miso_data [7:0] $end
+$var reg 8 * mosi_data [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx *
+b10000001 )
+b111 (
+b111 '
+0&
+bx %
+0$
+1#
+0"
+0!
+$end
+#5000
+1"
+#10000
+0"
+#15000
+1"
+#20000
+0"
+#25000
+1"
+#30000
+0"
+#35000
+1"
+#40000
+0"
+#45000
+1"
+#50000
+0"
+#55000
+1"
+#60000
+0"
+#65000
+1"
+#70000
+0"
+#75000
+1"
+#80000
+0"
+#85000
+1"
+#90000
+0"
+#95000
+1"
+#100000
+b110 '
+b1xxxxxxx %
+1!
+0"
+0#
+#105000
+0!
+b110 (
+b0xxxxxxx *
+1"
+#110000
+b101 '
+b10xxxxxx %
+0"
+#115000
+b101 (
+b0xxxxxx *
+1"
+#120000
+b100 '
+b100xxxxx %
+0"
+#125000
+b100 (
+b0xxxxx *
+1"
+#130000
+b11 '
+b1000xxxx %
+0"
+#135000
+b11 (
+b0xxxx *
+1"
+#140000
+b10 '
+b10000xxx %
+0"
+#145000
+b10 (
+b0xxx *
+1"
+#150000
+b1 '
+b100000xx %
+0"
+#155000
+b1 (
+b0xx *
+1"
+#160000
+b0 '
+b1000000x %
+0"
+#165000
+1!
+b0 (
+b0x *
+1"
+#170000
+1$
+b10000001 %
+0"
+#175000
+b111 (
+b0 *
+1"
+#180000
+0"
