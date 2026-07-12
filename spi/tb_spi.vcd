@@ -1,0 +1,216 @@
+$date
+	Sun Jul 12 23:23:49 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_spi $end
+$var wire 1 ! sclk $end
+$var wire 1 " mosi $end
+$var wire 1 # done $end
+$var wire 1 $ csn $end
+$var reg 1 % clk $end
+$var reg 1 & miso $end
+$var reg 8 ' mosi_data [7:0] $end
+$var reg 1 ( resetn $end
+$var reg 1 ) s $end
+$var reg 1 * start $end
+$var integer 32 + i [31:0] $end
+$scope module dut $end
+$var wire 1 % clk $end
+$var wire 1 $ csn $end
+$var wire 1 # done $end
+$var wire 1 & miso $end
+$var wire 1 " mosi $end
+$var wire 1 ( resetn $end
+$var wire 1 ! sclk $end
+$var wire 1 * start $end
+$var reg 4 , index [3:0] $end
+$var reg 8 - miso_data [7:0] $end
+$var reg 8 . mosi_data [7:0] $end
+$var reg 1 / mosi_send_data $end
+$var reg 2 0 next_state [1:0] $end
+$var reg 1 1 reg_csn $end
+$var reg 1 2 reg_done $end
+$var reg 2 3 state [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 3
+02
+11
+b0 0
+x/
+b10111100 .
+bx -
+b1000 ,
+b1001 +
+0*
+0)
+0(
+bx '
+0&
+0%
+1$
+0#
+x"
+0!
+$end
+#41700
+1!
+1%
+#83400
+0!
+0%
+#100000
+b1 0
+1*
+1(
+#125100
+b10 0
+b1 3
+1!
+1%
+#128100
+b10 0
+1)
+0*
+#166800
+0!
+0%
+#208500
+0$
+01
+b10 3
+b1000 +
+1!
+1%
+#250200
+0!
+0%
+#291900
+b0xxxxxxx -
+1"
+1/
+b111 ,
+b111 +
+1!
+1%
+#333600
+0!
+0%
+#375300
+b0xxxxxx -
+0"
+0/
+b110 ,
+b110 +
+b1xxxxxxx '
+1!
+1%
+#417000
+0!
+0%
+#458700
+b0xxxxx -
+1"
+1/
+b101 ,
+b101 +
+b10xxxxxx '
+1!
+1%
+#500400
+0!
+0%
+#542100
+b0xxxx -
+b100 ,
+b100 +
+b101xxxxx '
+1!
+1%
+#583800
+0!
+0%
+#625500
+b0xxx -
+b11 ,
+b11 +
+b1011xxxx '
+1!
+1%
+#667200
+0!
+0%
+#708900
+b0xx -
+b10 ,
+b10 +
+b10111xxx '
+1!
+1%
+#750600
+0!
+0%
+#792300
+b0x -
+0"
+0/
+b1 ,
+b1 +
+b101111xx '
+1!
+1%
+#834000
+0!
+0%
+#875700
+b11 0
+b0 -
+b0 ,
+b0 +
+b1011110x '
+1!
+1%
+#917400
+0!
+0%
+#959100
+b0 0
+x"
+x/
+b1111 ,
+b11 3
+b11111111111111111111111111111111 +
+b10111100 '
+1!
+1%
+#1000800
+0!
+0%
+#1042500
+1#
+12
+1$
+11
+b0 3
+b11111111111111111111111111111110 +
+1!
+1%
+#1045500
+0)
+#1084200
+0!
+0%
+#1125900
+0#
+02
+1!
+1%
+#1145500
